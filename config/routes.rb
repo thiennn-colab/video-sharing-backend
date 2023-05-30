@@ -2,9 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, skip: :all
 
   devise_scope :user do
-    post   '/signin',       to: 'sessions#create'
-    delete '/signout',      to: 'sessions#destroy'
-    post   '/signup',       to: 'registrations#create'
+    post   '/login',       to: 'sessions#create'
+    post   '/signup',       to: 'users#create'
     # put    '/account',      to: 'registrations#update'
     # delete '/account',      to: 'registrations#destroy'
     # put    '/password',     to: 'devise/passwords#update'

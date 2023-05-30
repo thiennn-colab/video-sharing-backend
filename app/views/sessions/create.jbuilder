@@ -1,1 +1,1 @@
-json.data @login
+json.access_token @login[:access]
