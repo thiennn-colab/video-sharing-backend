@@ -13,5 +13,8 @@ Rails.application.routes.draw do
     # get    '/unlock',       to: 'devise/unlocks#show'
   end
 
-  root "articles#index"
+  resources :posts do
+    resource :like, controller: "posts/likes"
+    resource :dislike, controller: "posts/dislikes"
+  end
 end
