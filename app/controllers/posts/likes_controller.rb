@@ -1,6 +1,6 @@
 class Posts::LikesController < BaseController
   def create
-    post = current_user.posts.find(params[:post_id])
+    post = Post.find(params[:post_id])
     dislike = post.dislikes.find_by(user: current_user)
 
     Like.transaction do
@@ -12,7 +12,7 @@ class Posts::LikesController < BaseController
   end
 
   def destroy
-    like = current_user.posts.find(params[:post_id]).likes.find_by!(user: current_user).destroy!
+    like = Post.find(params[:post_id]).likes.find_by!(user: current_user).destroy!
 
     head :ok
   end

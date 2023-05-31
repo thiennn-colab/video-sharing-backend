@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_153244) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_040012) do
   create_table "post_dislikes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "user_id", null: false
@@ -31,7 +31,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_153244) do
 
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id"
+    t.text "title", null: false
     t.text "url"
+    t.text "video_id", null: false
     t.text "description"
     t.integer "likes_count", default: 0
     t.integer "dislikes_count", default: 0

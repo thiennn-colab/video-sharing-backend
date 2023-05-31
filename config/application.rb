@@ -14,6 +14,7 @@ module VideoSharingBackend
     config.session_store :cookie_store, key: '246a8efdb06fb9c1e8be3ebb55ca47b3'
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
+    Dir["#{Rails.root}/app/services/*.rb"].each { |file| require file }
 
     # Configuration for the application, engines, and railties goes here.
     #

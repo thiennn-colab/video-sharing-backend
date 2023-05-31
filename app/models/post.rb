@@ -6,5 +6,7 @@ class Post < ApplicationRecord
   validates :url, format: {
     with: /\A(https:\/\/www.youtube.com\/).+v=.+&.+\z/,
     message: "Invalid URL"
-  }, uniqueness: true
+  }
+  validates :url, uniqueness: {message: "This video is already uploaded"}
+  validates :title, presence: true
 end
