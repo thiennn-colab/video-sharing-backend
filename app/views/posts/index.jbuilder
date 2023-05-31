@@ -9,6 +9,6 @@ json.data do
     json.disliked @dislikes.include?(post.id)
     json.dislikes_count post.dislikes_count
     json.created_by post.user.email
-    json.created_at post.created_at
+    json.created_at post.created_at.to_s
   end
 end

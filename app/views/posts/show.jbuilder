@@ -8,5 +8,5 @@ json.data do
   json.dislikes_count @post.dislikes_count
   json.disliked @disliked
   json.created_by @post.user.email
-  json.created_at @post.created_at
+  json.created_at @post.created_at.to_s
 end
