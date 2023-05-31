@@ -17,7 +17,7 @@ module ErrorRescueable
     end
 
     def handle_422(e)
-      render json: {error: {reason: "Validation failed", messages: e.record.errors.messages}}, status: :unprocessable_entity
+      render json: {error: {reason: "Validation failed", messages: e.record.errors.full_messages}}, status: :unprocessable_entity
     end
   end
 end
