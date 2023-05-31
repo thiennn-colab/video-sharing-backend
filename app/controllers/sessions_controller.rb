@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
     if user.valid_password?(params[:password])
       payload = { user_id: user.id }
-      @login = JWTSessions::Session.new(payload: payload).login
+      @login = JWTSessions::Session.new(payload: payload, access_exp: 6.hours.to_i).login
       @email = user.email
     else
       raise Exception.new("Invalid email or password")
