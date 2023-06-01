@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     resource :like, controller: "posts/likes"
     resource :dislike, controller: "posts/dislikes"
   end
+
+  mount ActionCable.server => '/cable'
 end

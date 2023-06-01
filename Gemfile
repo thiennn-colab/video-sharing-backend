@@ -15,6 +15,8 @@ gem "puma", "~> 5.0"
 gem 'devise'
 gem "jwt_sessions"
 gem 'rack-cors'
+gem 'actioncable'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
