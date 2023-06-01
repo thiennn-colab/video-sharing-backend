@@ -12,7 +12,7 @@ class Posts::DislikesController < BaseController
   end
 
   def destroy
-    like = Post.find(params[:post_id]).dislikes.find_by!(user: current_user).destroy!
+    Post.find(params[:post_id]).dislikes.find_by!(user: current_user).destroy!
 
     head :ok
   end

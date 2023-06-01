@@ -24,5 +24,12 @@ if Rails.env.development?
                methods: [:get, :post, :options, :delete, :put, :patch, :head],
                credentials: true
     end
+    allow do
+      origins "http://127.0.0.1:4173"
+      resource "*",
+               headers: :any,
+               methods: [:get, :post, :options, :delete, :put, :patch, :head],
+               credentials: true
+    end
   end
 end
