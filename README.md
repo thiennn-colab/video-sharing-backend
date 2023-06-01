@@ -25,11 +25,11 @@ This is the Backend Application of Youtube Video Sharing App which has some feat
 ### Database Setup
 - run: `rails db:create db:migrate`
 
-* Running the Application
+### Running the Application
 
 - run: `rails s` (default port is 3000)
 
-* How to run the test suite
+### How to run the test suite
 I use `rspec` as a testing framework
 - to run: `bundle exec rspec`
 
