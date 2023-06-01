@@ -14,7 +14,7 @@ Running the Application: How to start the development server, access the applica
 Usage: A brief guide outlining how to use the application, including any specific features or functionality the reviewer should be aware of.
 Troubleshooting: Common issues that may arise during setup and their potential solutions.
 
-* Introduction
+### Introduction
 This is the Backend Application of Youtube Video Sharing App which has some features:
 - user log in, registration
 - viewing youtube videos from your sharing and other sharing links
@@ -22,21 +22,21 @@ This is the Backend Application of Youtube Video Sharing App which has some feat
 - share your links, delete your shared videos
 - get notifications when other user shares a new video
 
-* Prerequisites
+### Prerequisites
 
 - Ruby version: ruby 3.0.4p208 (2022-04-12 revision 3fa771dded) [x86_64-darwin21]
 - Rails version: Rails 7.0.5
 - DB: MySQL
 - Redis
 
-* Installation & Configuration
+### Installation & Configuration
 
 - clone this repository
 - after you cloned, open a terminal and go to the project dir
 - run: `bundle install`
 
 
-* Database Setup
+### Database Setup
 - run: `rails db:create db:migrate`
 
 * Running the Application
