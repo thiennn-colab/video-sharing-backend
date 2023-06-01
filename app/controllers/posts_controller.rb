@@ -9,14 +9,13 @@ class PostsController < BaseController
   end
 
   def create
-    post = current_user.posts.create!(
+    @post = current_user.posts.create!(
       title: params[:title],
       url: params[:url],
       video_id: YoutubeUrlService.parse_id(url: params[:url]),
       description: params[:description]
     )
-    head :ok
-    NotificationService.call(user: current_user, post: post)
+    NotificationService.call(user: current_user, post: @post)
   end
 
   def show

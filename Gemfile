@@ -16,6 +16,7 @@ gem 'devise'
 gem "jwt_sessions"
 gem 'rack-cors'
 gem 'actioncable'
+gem 'hashid-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"

@@ -5,7 +5,7 @@ class NotificationService
         'notification_channel',
         { 
           message: "#{user.email} shared a video!",
-          post_id: post.id,
+          post_id: post.hashid,
           posted_user: user.email
         }
       )

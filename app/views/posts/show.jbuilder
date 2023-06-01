@@ -1,5 +1,5 @@
 json.data do
-  json.id @post.id
+  json.id @post.hashid
   json.title @post.title
   json.video_id @post.video_id
   json.description @post.description

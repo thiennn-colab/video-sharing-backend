@@ -1,6 +1,6 @@
 json.data do
   json.array! @posts do |post|
-    json.id post.id
+    json.id post.hashid
     json.title post.title
     json.video_id post.video_id
     json.description post.description
