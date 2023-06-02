@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, skip: :all
 
+  get '/', to: 'health#check'
+
   devise_scope :user do
     post   '/login',       to: 'sessions#create'
     post   '/signup',       to: 'users#create'
