@@ -15,6 +15,9 @@ module VideoSharingBackend
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
     Dir["#{Rails.root}/app/services/*.rb"].each { |file| require file }
+    config.action_cable.allowed_request_origins = [
+      'http://ec2-18-141-25-185.ap-southeast-1.compute.amazonaws.com'
+    ]
 
     # Configuration for the application, engines, and railties goes here.
     #
