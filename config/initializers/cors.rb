@@ -31,5 +31,12 @@ if Rails.env.development?
                methods: [:get, :post, :options, :delete, :put, :patch, :head],
                credentials: true
     end
+    allow do
+      origins "http://ec2-18-141-25-185.ap-southeast-1.compute.amazonaws.com"
+      resource "*",
+               headers: :any,
+               methods: [:get, :post, :options, :delete, :put, :patch, :head],
+               credentials: true
+    end
   end
 end
