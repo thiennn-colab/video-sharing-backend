@@ -50,6 +50,4 @@ test:
 #
 production:
   <<: *default
-  database: video_sharing_backend_production
-  username: video_sharing_backend
-  password: <%= ENV["VIDEO_SHARING_BACKEND_DATABASE_PASSWORD"] %>
+  database: database-1
