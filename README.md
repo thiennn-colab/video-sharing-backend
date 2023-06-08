@@ -34,3 +34,8 @@ I use `rspec` as a testing framework
 - to run: `bundle exec rspec`
 
 * ...
+
+## For Docker using
+- run build: `docker-compose build`
+- run start: `docker-compose up`
+- run migration: `docker-compose run app rails db:migrate`

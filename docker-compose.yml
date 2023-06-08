@@ -1,0 +1,35 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+    environment:
+      DATABASE_USER: root
+      DATABASE_PASSWORD: password
+      DATABASE_HOSTNAME: db
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_URL: redis://redis:6379
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: social_insurance_web_development
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+
+  redis:
+    image: redis:6.0
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+
