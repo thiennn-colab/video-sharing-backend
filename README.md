@@ -38,4 +38,5 @@ I use `rspec` as a testing framework
 ## For Docker using
 - run build: `docker-compose build`
 - run start: `docker-compose up`
+- run create DB table: `docker-compose run app rails db:create`
 - run migration: `docker-compose run app rails db:migrate`
